@@ -14,6 +14,13 @@
   <code>全自动</code> 模式
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/platform-Windows-2563EB?style=flat-square" alt="Windows" />
+  <img src="https://img.shields.io/badge/Claude%20Code-MCP%20Launcher-0F172A?style=flat-square" alt="Claude Code MCP Launcher" />
+  <img src="https://img.shields.io/badge/modes-%E5%8F%97%E9%99%90%20%7C%20%E5%85%A8%E8%87%AA%E5%8A%A8-1D4ED8?style=flat-square" alt="Modes" />
+  <img src="https://img.shields.io/badge/license-MIT-16A34A?style=flat-square" alt="MIT License" />
+</p>
+
 这是一个专门给 Windows 用户准备的 Claude Code 浏览器自动化启动模板。
 
 它不是单纯“把 Claude 连上 Chrome”。
@@ -36,6 +43,20 @@
 - 独立浏览器资料目录，可保留登录态
 - 提供 `受限` 和 `全自动` 两种模式
 - 本地 MCP 配置，不要求用户手改全局 Claude 设置
+
+## 可视化流程
+
+<p align="center">
+  <img src="assets/flow.svg" alt="Workflow diagram" width="100%" />
+</p>
+
+## 内容导航
+
+- [这个项目解决了什么问题](#这个项目解决了什么问题)
+- [模式区别](#模式区别)
+- [适合谁](#适合谁)
+- [使用方式](#使用方式)
+- [风险说明](#风险说明)
 
 ## 这个项目解决了什么问题
 
@@ -150,6 +171,12 @@ claude-chrome-automation-windows/
   scripts/
     start-chrome-debug-9222.bat
 ```
+
+## 安装方式
+
+1. 克隆或下载这个仓库。
+2. 确保你的 Windows 机器上已经安装 `claude`、`node`、`npx` 和 Chrome。
+3. 双击 `launch-limited.bat` 或 `launch-full-auto.bat`。
 
 ## 使用方式
 
