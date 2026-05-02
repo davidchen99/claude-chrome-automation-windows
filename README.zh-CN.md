@@ -1,4 +1,18 @@
-# Claude Chrome Automation for Windows
+<p align="center">
+  <img src="assets/hero.svg" alt="Claude Chrome Automation for Windows" width="100%" />
+</p>
+
+<h1 align="center">Claude Chrome Automation for Windows</h1>
+
+<p align="center">面向 Windows 的 Claude Code 浏览器自动化一键启动模板。</p>
+
+<p align="center">
+  <a href="https://github.com/davidchen99/claude-chrome-automation-windows/blob/main/README.md">English</a>
+  ·
+  <code>受限</code> 模式
+  ·
+  <code>全自动</code> 模式
+</p>
 
 这是一个专门给 Windows 用户准备的 Claude Code 浏览器自动化启动模板。
 
@@ -14,6 +28,14 @@
 一句话概括：
 
 把原本分散、容易踩坑的配置过程，整理成“下载后双击即可启动”的方案。
+
+## 一眼看懂
+
+- 双击即可启动，适合原生 Windows 使用
+- 自动连接 `127.0.0.1:9222` 的专用 Chrome 调试实例
+- 独立浏览器资料目录，可保留登录态
+- 提供 `受限` 和 `全自动` 两种模式
+- 本地 MCP 配置，不要求用户手改全局 Claude 设置
 
 ## 这个项目解决了什么问题
 
@@ -39,6 +61,13 @@
 3. 根据任务风险，选择“受限”还是“全自动”
 
 真正的价值，不在于某一条命令，而在于把这三步打包成一个 Windows 用户能直接上手的模板。
+
+## 模式区别
+
+| 模式 | 适合场景 | 权限风格 |
+| --- | --- | --- |
+| `受限` | 日常网页抓取、点击、阅读、截图 | 偏浏览器自动化，更稳 |
+| `全自动` | 高信任任务，希望 Claude 少确认 | `--dangerously-skip-permissions` |
 
 ## 创新点
 
