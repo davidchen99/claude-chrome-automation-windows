@@ -14,6 +14,13 @@
   <code>full-auto</code> mode
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/platform-Windows-2563EB?style=flat-square" alt="Windows" />
+  <img src="https://img.shields.io/badge/Claude%20Code-MCP%20Launcher-0F172A?style=flat-square" alt="Claude Code MCP Launcher" />
+  <img src="https://img.shields.io/badge/modes-limited%20%7C%20full--auto-1D4ED8?style=flat-square" alt="Modes" />
+  <img src="https://img.shields.io/badge/license-MIT-16A34A?style=flat-square" alt="MIT License" />
+</p>
+
 This project packages a Windows-native workflow for people who want Claude to control Chrome without manually wiring MCP every time.
 
 It gives you:
@@ -32,6 +39,22 @@ It gives you:
 - Safer `limited` mode for browser-first tasks
 - Aggressive `full-auto` mode for high-trust automation
 - Project-local MCP config instead of global Claude edits
+
+## Visual flow
+
+<p align="center">
+  <img src="assets/flow.svg" alt="Workflow diagram" width="100%" />
+</p>
+
+## Contents
+
+- [Why this exists](#why-this-exists)
+- [Modes](#modes)
+- [Who this is for](#who-this-is-for)
+- [Quick start](#quick-start)
+- [How it works](#how-it-works)
+- [Security notes](#security-notes)
+- [Troubleshooting](#troubleshooting)
 
 ## Why this exists
 
@@ -138,6 +161,12 @@ claude-chrome-automation-windows/
 - Claude Code installed and available as `claude`
 - Node.js and `npx`
 - Google Chrome
+
+## Install
+
+1. Clone or download this repository.
+2. Make sure `claude`, `node`, `npx`, and Chrome are available on your Windows machine.
+3. Double-click `launch-limited.bat` or `launch-full-auto.bat`.
 
 ## Quick start
 
