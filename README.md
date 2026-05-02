@@ -1,6 +1,18 @@
-# Claude Chrome Automation for Windows
+<p align="center">
+  <img src="assets/hero.svg" alt="Claude Chrome Automation for Windows" width="100%" />
+</p>
 
-One-click browser automation for Claude Code on Windows.
+<h1 align="center">Claude Chrome Automation for Windows</h1>
+
+<p align="center">One-click browser automation for Claude Code on Windows.</p>
+
+<p align="center">
+  <a href="https://github.com/davidchen99/claude-chrome-automation-windows/blob/main/README.zh-CN.md">中文说明</a>
+  ·
+  <code>limited</code> mode
+  ·
+  <code>full-auto</code> mode
+</p>
 
 This project packages a Windows-native workflow for people who want Claude to control Chrome without manually wiring MCP every time.
 
@@ -11,6 +23,15 @@ It gives you:
 - a `limited` launcher for safer browser-first automation
 - a `full-auto` launcher for maximum autonomy
 - project-local MCP config instead of fragile per-user setup
+
+## At a glance
+
+- Double-click launchers for native Windows usage
+- Dedicated Chrome debug browser on `127.0.0.1:9222`
+- Persistent login session through a separate browser profile
+- Safer `limited` mode for browser-first tasks
+- Aggressive `full-auto` mode for high-trust automation
+- Project-local MCP config instead of global Claude edits
 
 ## Why this exists
 
@@ -37,6 +58,13 @@ The workflow is simple:
 3. Choose the right autonomy level for the task
 
 That sounds small, but in practice it removes most of the friction people hit on Windows.
+
+## Modes
+
+| Mode | Best for | Permission style |
+| --- | --- | --- |
+| `limited` | everyday browsing, clicking, scraping, screenshots | browser-first, safer |
+| `full-auto` | high-trust tasks with minimal interruption | `--dangerously-skip-permissions` |
 
 ## Why it is different
 
