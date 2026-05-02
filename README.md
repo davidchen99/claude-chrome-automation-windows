@@ -1,31 +1,44 @@
 # Claude Chrome Automation for Windows
 
-One-click Claude Code + Chrome DevTools MCP launcher for Windows.
+One-click browser automation for Claude Code on Windows.
 
-This project packages a practical Windows workflow into a reusable template:
+This project packages a Windows-native workflow for people who want Claude to control Chrome without manually wiring MCP every time.
 
-- Dedicated Chrome instance with remote debugging on `127.0.0.1:9222`
-- Two launch modes:
-  - `limited`: safer, browser-first automation
-  - `full-auto`: fewer interruptions, higher risk
-- Project-local MCP config, so users do not need to manually edit global Claude MCP settings
-- Relative-path launch scripts, so the folder can be moved anywhere
+It gives you:
 
-## Why this is useful
+- a dedicated Chrome instance on `127.0.0.1:9222`
+- a reusable login-preserving browser profile
+- a `limited` launcher for safer browser-first automation
+- a `full-auto` launcher for maximum autonomy
+- project-local MCP config instead of fragile per-user setup
 
-On native Windows, Claude Code + local MCP servers are often less smooth than on macOS/Linux because:
+## Why this exists
 
-- `npx`-based MCP startup is more fragile
-- users want browser automation without opening up the whole terminal
-- users want a single clickable entry instead of multiple setup steps
+Most browser automation examples for Claude stop at "install chrome-devtools-mcp and make it connect once."
 
-This project turns that into a portable pattern:
+That is not enough for normal Windows users.
 
-1. Start a dedicated Chrome debug profile
-2. Connect Claude Code to that browser via MCP
-3. Choose between a limited mode and a full-auto mode
+The real gap is productization:
 
-## What makes this setup different
+- Windows users want double-click launchers
+- they want Chrome to reopen in the right debugging mode
+- they want login state to persist
+- they want a safer everyday mode and a more aggressive mode
+- they do not want to hand-edit Claude config files just to try browser automation
+
+This repo packages that missing layer into a reusable template.
+
+## Core idea
+
+The workflow is simple:
+
+1. Launch a dedicated Chrome debug session
+2. Connect Claude Code to it through a local MCP config
+3. Choose the right autonomy level for the task
+
+That sounds small, but in practice it removes most of the friction people hit on Windows.
+
+## Why it is different
 
 ### 1. Native Windows first
 
@@ -39,7 +52,7 @@ This is designed specifically for Windows, not adapted from a Unix-first setup.
 
 Most examples stop at "make Claude control Chrome".
 
-This project adds a useful product layer:
+This project adds a useful operating model:
 
 - `limited` mode
   - allows browser automation
@@ -68,6 +81,13 @@ Users can download the folder and launch it directly after they have:
 - Google Chrome installed
 
 No manual MCP editing is required because the launcher passes a local MCP config at runtime.
+
+## Who this is for
+
+- Windows users who want Claude to browse, click, read, and extract page content
+- people who need persistent login sessions in a dedicated automation browser
+- users who want a practical launcher instead of a configuration tutorial
+- advanced users who want a full-auto mode for high-trust tasks
 
 ## Folder structure
 
@@ -198,4 +218,3 @@ If you want to distribute this as a repo:
 - keep the launcher filenames stable
 - avoid user-specific absolute paths
 - do not commit personal Chrome profile data
-
